@@ -1,0 +1,34 @@
+.cancelPopupContainer {
+  background-color: #263238c3;
+  bottom: 100px;
+  border-radius: 10px;
+  color: #fff;
+  left: 0;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  margin: auto;
+  width: 90%;
+  z-index: 2;
+}
+
+.popupBackground {
+  background-color: #d9d9d945;
+  height: 100vh;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100vw;
+  z-index: 1;
+}
+
+.actionsContainer {
+  display: flex;
+  text-align: center;
+  margin: auto;
+}
+
+.mainButton{
+  height: 39px;
+  margin: 20px;
+}

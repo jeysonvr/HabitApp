@@ -1,0 +1,46 @@
+.infoCard {
+  border: 1px solid #efefef;
+  box-shadow: 0px 1px 3px #888888;
+  color: #263238;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding: 5px;
+  position: absolute;
+  bottom: 150px;
+  max-width: 90%;
+}
+
+.infoCard img {
+  align-self: center;
+  height: 64px;
+  width: 64px;
+}
+
+.infoCard h5 {
+  margin: 0 10px;
+}
+
+.infoCard p {
+  margin: 0;
+  text-align: left;
+}
+
+.infoCard .ios {
+  display: flex;
+}
+
+#verButton {
+  float: right;
+  height: 25px;
+  width: 100px;
+}
+
+.dummyTask{
+  bottom: unset;
+}
+
+img.smallIcon {
+  height: 27px;
+  width: 27px;
+}

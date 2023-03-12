@@ -1,0 +1,64 @@
+h2,
+p {
+  text-align: center;
+}
+
+.buttonsContainer {
+  display: inline-grid;
+  text-align: center;
+  width: 100%;
+}
+
+.buttonsContainer div {
+  margin: 10px auto;
+}
+
+.mainButton {
+  height: 41px;
+  width: 222px;
+}
+
+.link {
+  color: black;
+  font-weight: lighter;
+  text-decoration: none;
+}
+
+.formContainer {
+  margin: 20px auto;
+  padding: 0 40px;
+  width: 100%;
+}
+
+.formContainer p {
+  color: #888888;
+  margin-bottom: 5px;
+  margin-top: 25px;
+  text-align: left;
+}
+
+.formContainer input {
+  border: 1px solid #888888;
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px #888888;
+  height: 40px;
+  width: 100%;
+}
+
+.formContainer input.error {
+  border: 1px solid var(--ion-color-danger);
+  border-radius: 6px;
+  box-shadow: 0px 1px 2px #888888;
+  height: 40px;
+  width: 100%;
+}
+
+.formContainer p.error {
+  font-size: 12px;
+  margin-top: 1px;
+  text-align: right;
+}
+
+.main {
+  padding-bottom: 20px;
+}

@@ -1,0 +1,8 @@
+.dayPickerContainer {
+  text-align: center;
+}
+
+.dayPickerContainer input {
+  box-shadow: none;
+  background-color: #fff;
+}

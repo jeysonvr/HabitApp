@@ -1,0 +1,51 @@
+hr {
+  display: block;
+  width: 90%;
+  background-color: #000;
+  height: 1px;
+  margin: 10px auto;
+}
+
+#targetContainer {
+  height: 70%;
+}
+
+#targetContainer h1 {
+  margin: 20px
+}
+
+#targetContainer .infoCard {
+  position: unset;
+  margin: auto;
+}
+
+.imgTargetContainer {
+  border: 1px solid #0006;
+  border-radius: 10px;
+  text-align: center;
+  margin: 10px 50px;
+  position: relative;
+}
+
+.imgTargetContainer img {
+  height: 131px;
+  width: 139px;
+}
+
+.imgTargetContainer img.smallIcon {
+  height: 20px;
+  width: 20px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+#buttonContainer {
+  position: absolute;
+  bottom: 30px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding-bottom: 0 !important;
+}

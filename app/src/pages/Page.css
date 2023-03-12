@@ -1,0 +1,23 @@
+.ion-page {
+  justify-content: unset !important;
+}
+
+#homeBody,
+#targetBody {
+  padding: 20px;
+  position: relative;
+  height: 100%;
+}
+
+#homeBody p,
+#targetBody p {
+  font-size: 16px;
+  font-weight: 400;
+  text-align: left;
+}
+
+#homeBody h1,
+#targetBody h1 {
+  font-size: 32px;
+  font-weight: lighter;
+}
