@@ -1,0 +1,69 @@
+<div class="signin">
+  <div class="header">
+    <h1>
+      HabitApp
+    </h1>
+    <h3>
+      Una herramienta que te ayudará a mejorar tus hábitos
+    </h3>
+    <h2>
+      Registro
+    </h2>
+  </div>
+  <div class="container">
+    <form [formGroup]="formSignin">
+      <div class="row">
+        <div class="input-container col-md-4">
+          Nombre completo
+          <input  class="textbox"
+          type="text"
+          placeholder="Nombre"
+          formControlName="txtName">
+        </div>
+        <div class="col-md-2"></div>
+        <div class="input-container col-md-4">
+          Correo/Usuario
+          <input  class="textbox"
+          type="text"
+          placeholder="ejemplo@correo.com"
+          formControlName="txtUser">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-container col-md-4">
+          Contraseña
+          <input  class="textbox"
+          type="password"
+          placeholder="***********************"
+          formControlName="txtPassword">
+        </div>
+        <div class="col-md-2"></div>
+        <div class="input-container col-md-4">
+          Confirmar contraseña
+          <input  class="textbox"
+          type="password"
+          placeholder="***********************"
+          formControlName="txtPasswordConfirmation">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-container col-md-4">
+          ¿Qué hábitos te gustaría mejorar?
+          <select class="textbox" formControlName="ddlHabits" placeholder="Seleccionar opcion(es)">
+            <option value="1">Hacer ejercicio</option>
+            <option value="2">Dormir mejor</option>
+            <option value="3">Aumentar productividad</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="true" class="button blue-botton"> Aceptar </button>
+        </div>
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="true" class="button red-botton"> Cancelar </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

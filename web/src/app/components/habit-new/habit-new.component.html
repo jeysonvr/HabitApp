@@ -1,0 +1,54 @@
+<div class="habit">
+  <div class="header">
+    <h1>
+      HabitApp
+    </h1>
+    <h2>
+      Hacer ejercicio
+    </h2>
+    <h3>
+      Tareas o hábitos
+    </h3>
+  </div>
+  <div class="container">
+    <form [formGroup]="formNewHabit">
+      <div class="row">
+        <div class="input-container col-md-8">
+          Nombre de la tarea o hábito
+          <input  class="textbox"
+          type="text"
+          placeholder="Nombre"
+          formControlName="txtName">
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-container col-md-8">
+          Horario
+          <select class="textbox" formControlName="ddlHabits" placeholder="Seleccionar opcion(es)">
+            <option value="1">Hacer ejercicio</option>
+            <option value="2">Dormir mejor</option>
+            <option value="3">Aumentar productividad</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-container col-md-8">
+          Día de la semana
+          <select class="textbox" formControlName="ddlHabits" placeholder="Seleccionar opcion(es)">
+            <option value="1">Hacer ejercicio</option>
+            <option value="2">Dormir mejor</option>
+            <option value="3">Aumentar productividad</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4 buttonContainer">
+          <button type="button" (click)="true" class="button blue-botton"> Aceptar </button>
+        </div>
+        <div class="col-md-4 buttonContainer">
+          <button type="button" (click)="true" class="button red-botton"> Cancelar </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

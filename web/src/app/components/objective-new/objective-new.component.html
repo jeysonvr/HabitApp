@@ -1,0 +1,51 @@
+<div class="objective">
+  <div class="header">
+    <h1>
+      HabitApp
+    </h1>
+    <h2>
+      Crear objetivo
+    </h2>
+  </div>
+  <div class="container">
+    <form [formGroup]="formNewObjective">
+      <div class="row obj-row">
+        <div class="input-container col-md-6">
+          Imagén de referencia
+          <input class="draganddrop"
+          type="text"
+          formControlName="txtName"
+          placeholder="Escoge una imagén o arrastrala aquí" required="true" value="" readonly="true">
+        </div>
+      </div>
+      <div class="row obj-row">
+        <div class="input-container col-md-6">
+          Título
+          <input  class="textbox"
+          type="text"
+          placeholder=""
+          formControlName="txtName">
+        </div>
+      </div>
+      <div class="row obj-row">
+        <div class="input-container col-md-6">
+          Descripción
+          <input  class="textbox"
+          type="text"
+          placeholder=""
+          formControlName="txtName">
+        </div>
+      </div>
+      <div class="row obj-row"></div>
+      <div class="row obj-row">
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="true" class="button blue-botton"> Aceptar </button>
+        </div>
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="true" class="button red-botton"> Cancelar </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,97 @@
+<div class="habit">
+  <div class="header">
+    <h1>
+      HabitApp
+    </h1>
+    <h2>
+      Hacer ejercicio
+    </h2>
+    <h3>
+      Tareas o hábitos
+    </h3>
+  </div>
+  <div *ngIf="isEmpty" class="container">
+    <div class="row"></div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-8 card-empty">
+        <strong>
+          ¿Sabías qué?
+        </strong>
+        <p>
+          Dormir las horas suficientes reduce la frecuencia de enfermedades...
+        </p>
+      </div>
+    </div>
+    <div class="row"></div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-4" style="justify-content: center;">
+        <p style="justify-content: center; display: flex;color: #888;">
+          Aún no tienes tareas o hábitos registrados para este objetivo
+        </p>
+      </div>
+    </div>
+    <div class="row"></div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-3 buttonContainer">
+        <button type="button" (click)="true" class="button blue-botton"> Agregar tareas </button>
+      </div>
+      <div class="col-md-3 buttonContainer">
+        <button type="button" (click)="true" class="button red-botton"> Volver </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!isEmpty" class="container">
+    <div class="row"></div>
+    <div class="row" style="justify-content: center;">
+      <div class="grid-container">
+        <div class="row main-row">
+          <div class="col-md-3 cell">Nombre</div>
+          <div class="col-md-3 cell">Días</div>
+          <div class="col-md-3 cell">Horario</div>
+          <div class="col-md-3 cell">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 cell">Tarea 1</div>
+          <div class="col-md-3 cell"> Lunes a Viernes</div>
+          <div class="col-md-3 cell"> 7 am</div>
+          <div class="col-md-3 cell">
+            <button type="button" (click)="true" class="button blue-botton"> Editar </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 cell">Tarea 2 </div>
+          <div class="col-md-3 cell">Todos los días</div>
+          <div class="col-md-3 cell">8 am</div>
+          <div class="col-md-3 cell">
+            <button type="button" (click)="true" class="button blue-botton"> Editar </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 cell">Tarea 3 </div>
+          <div class="col-md-3 cell">Lunes, miercoles y viernes</div>
+          <div class="col-md-3 cell">12 pm </div>
+          <div class="col-md-3 cell">
+            <button type="button" (click)="true" class="button blue-botton"> Editar </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-3 cell">Tarea 4 </div>
+          <div class="col-md-3 cell">Sábado</div>
+          <div class="col-md-3 cell">8 pm</div>
+          <div class="col-md-3 cell">
+            <button type="button" (click)="true" class="button blue-botton"> Editar </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-3 buttonContainer">
+        <button type="button" (click)="true" class="button blue-botton"> Agregar tareas </button>
+      </div>
+      <div class="col-md-3 buttonContainer">
+        <button type="button" (click)="true" class="button red-botton"> Volver </button>
+      </div>
+    </div>
+  </div>
+</div>
