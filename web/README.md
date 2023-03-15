@@ -8,5 +8,5 @@ Para correr el proyecto de manera local debe descargar el código de este reposi
 * Instalar dependencias: `> npm install`
 * Iniciar un servidor: `>ng serve --open`
 
-Luego, podrá dirigirse en su navegador a la ruta `localhost:8100` y allí podrá navegar sobre la aplicación.
+Luego, podrá dirigirse en su navegador a la ruta `localhost:4200` y allí podrá navegar sobre la aplicación.
 
