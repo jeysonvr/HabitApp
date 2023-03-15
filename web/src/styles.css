@@ -74,6 +74,30 @@ h3{
   font-weight: 600;
 }
 
+h4{
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.menu{
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  position: absolute !important;
+  background-color: var(--dl-color-primary);
+  color: var(--dl-color-background);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu a{
+  color: var(--dl-color-background);
+  font-style: normal;
+}
+
 .login h1{
   justify-content: center;
   display: flex;
@@ -200,7 +224,7 @@ form{
 
 .objective .header{
   position: relative;
-  z-index: 5;
+  z-index: 1;
   flex: 2;
   background-image: none;
 }
@@ -226,6 +250,7 @@ form{
 }
 
 .objective .row{
+  width: 100%;
   margin: 30px;
 }
 
@@ -293,7 +318,7 @@ form{
 
 .habit .header{
   position: relative;
-  z-index: 5;
+  z-index: 1;
   flex: 1;
   background-image: none;
   background-color: #1BB55C40;
@@ -333,7 +358,7 @@ form{
 }
 
 .habit h3{
-  flex: 1;
+  /* flex: 1; */
   align-items: center;
   display: flex;
   margin-left: 70px;
@@ -356,6 +381,11 @@ form{
   justify-content: center;
   display: flex;
   border-left: 1px solid #CDCDCD;
+}
+
+.navbar{
+  /* display: flex; */
+  align-items: flex-start;
 }
 
 hr{
