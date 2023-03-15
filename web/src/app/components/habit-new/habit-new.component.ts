@@ -15,10 +15,22 @@ export class HabitNewComponent implements OnInit {
 
   ngOnInit(): void {
     this.formNewHabit = this.formBuilder.group({
-      txtName:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      txtUser:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      txtPassword:['',[Validators.required,Validators.minLength(8)]]
+      txtTitle:['',[Validators.required, Validators.minLength(1)]],
+      ddlTime:['',[Validators.required, Validators.minLength(1)]],
+      ddlDay:['',[Validators.required,Validators.minLength(1)]]
     })
+  }
+
+  get f() {
+    return this.formNewHabit.controls;
+  }
+
+  async create(){
+    if(this.formNewHabit.valid)
+      this.router.navigate(['/habitList/false' ]);
+  }
+  async cancel(){
+    this.router.navigate(['/habitList/true']);
   }
 
 }

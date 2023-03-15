@@ -30,13 +30,13 @@
     <div class="row"></div>
     <div class="row" style="justify-content: center;">
       <div class="col-md-3 buttonContainer">
-        <button type="button" (click)="true" class="button blue-botton"> Agregar nuevos objetivos </button>
+        <button type="button" (click)="create()" class="button blue-botton"> Agregar nuevos objetivos </button>
       </div>
     </div>
   </div>
   <div *ngIf="!isEmpty" class="container">
     <div class="row" style="justify-content: center;">
-      <div class="card col-md-4">
+      <div class="card col-md-4" (click)="habits()">
         <div class="card-text">
           Hacer ejercicio
         </div>
@@ -44,7 +44,7 @@
     </div>
     <div class="row" style="justify-content: center;">
       <div class="col-md-3 buttonContainer">
-        <button type="button" (click)="true" class="button blue-botton"> Agregar nuevos objetivos </button>
+        <button type="button" (click)="create()" class="button blue-botton"> Agregar nuevos objetivos </button>
       </div>
     </div>
   </div>

@@ -17,13 +17,21 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {
     this.formLogin = this.formBuilder.group({
-      txtUsuario:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      txtPassword:['',[Validators.required,Validators.minLength(8)]]
+      txtUser:['',[Validators.required,Validators.minLength(1)]],
+      txtPassword:['',[Validators.required,Validators.minLength(1)]]
     });
   }
 
   async login(){
-    this.router.navigate(['/pokemonList' ]);
+    if(this.formLogin.valid)
+      this.router.navigate(['/objectiveList/true' ]);
+  }
+  async signin(){
+    this.router.navigate(['/signin' ]);
+  }
+
+  get f() {
+    return this.formLogin.controls;
   }
 
 }

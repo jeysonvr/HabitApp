@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-habit-list',
@@ -9,12 +9,20 @@ import { ActivatedRoute } from '@angular/router';
 export class HabitListComponent implements OnInit {
 
   isEmpty?: boolean;
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params =>{
       this.isEmpty = params['isEmpty'] == 'true' ? true : false;
     });
+  }
+
+  newHabit(){
+    this.router.navigate(['newHabit']);
+  }
+  cancel(){
+    this.router.navigate(['objectiveList/false']);
   }
 
 }

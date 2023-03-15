@@ -14,18 +14,26 @@
           <input  class="textbox"
           type="text"
           placeholder="Usuario"
-          formControlName="txtUsuario">
+          formControlName="txtUser"
+          [ngClass]="f['txtUser'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtUser'].valid">
+            Campo requerido
+          </div>
       </div>
       <div class = "input-container col-md-4">
           Contraseña
           <input  class="textbox"
           type="password"
           placeholder="***********************"
-          formControlName="txtPassword">
+          formControlName="txtPassword"
+          [ngClass]="f['txtPassword'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtPassword'].valid">
+            Campo requerido
+          </div>
       </div>
       <div class="buttonContainer col-md-3">
           <button type="button" (click)="login()" class="button blue-botton"> Ingresar </button>
-          <button type="button" (click)="login()" class="button white-botton"> Registrarse </button>
+          <button type="button" (click)="signin()" class="button white-botton"> Registrarse </button>
       </div>
 
   </form>

@@ -15,12 +15,24 @@ export class SigninComponent implements OnInit {
 
   ngOnInit(): void {
     this.formSignin = this.formBuilder.group({
-      txtName:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      txtUser:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      txtPassword:['',[Validators.required,Validators.minLength(8)]],
-      txtPasswordConfirmation:['',[Validators.required,Validators.minLength(8)]],
-      ddlHabits:['',[Validators.required,Validators.minLength(8)]],
+      txtName:['',[Validators.required,Validators.minLength(1)]],
+      txtUser:['',[Validators.required,Validators.minLength(1)]],
+      txtPassword:['',[Validators.required,Validators.minLength(1)]],
+      txtPasswordConfirmation:['',[Validators.required,Validators.minLength(1)]],
+      ddlHabits:['',[Validators.required,Validators.minLength(1)]],
     });
+  }
+
+  get f() {
+    return this.formSignin.controls;
+  }
+
+  async signin(){
+    if(this.formSignin.valid)
+      this.router.navigate(['/objectiveList/true' ]);
+  }
+  async cancel(){
+    this.router.navigate(['']);
   }
 
 }

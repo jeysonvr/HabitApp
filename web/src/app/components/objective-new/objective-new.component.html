@@ -14,7 +14,6 @@
           Imagén de referencia
           <input class="draganddrop"
           type="text"
-          formControlName="txtName"
           placeholder="Escoge una imagén o arrastrala aquí" required="true" value="" readonly="true">
         </div>
       </div>
@@ -24,7 +23,11 @@
           <input  class="textbox"
           type="text"
           placeholder=""
-          formControlName="txtName">
+          formControlName="txtTitle"
+          [ngClass]="f['txtTitle'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtTitle'].valid">
+            Campo requerido
+          </div>
         </div>
       </div>
       <div class="row obj-row">
@@ -33,16 +36,20 @@
           <input  class="textbox"
           type="text"
           placeholder=""
-          formControlName="txtName">
+          formControlName="txtDescription"
+          [ngClass]="f['txtDescription'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtDescription'].valid">
+            Campo requerido
+          </div>
         </div>
       </div>
       <div class="row obj-row"></div>
       <div class="row obj-row">
         <div class="col-md-3 buttonContainer">
-          <button type="button" (click)="true" class="button blue-botton"> Aceptar </button>
+          <button type="button" (click)="create()" class="button blue-botton"> Aceptar </button>
         </div>
         <div class="col-md-3 buttonContainer">
-          <button type="button" (click)="true" class="button red-botton"> Cancelar </button>
+          <button type="button" (click)="cancel()" class="button red-botton"> Cancelar </button>
         </div>
       </div>
 

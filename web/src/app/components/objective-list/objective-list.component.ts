@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-objective-list',
@@ -9,7 +9,8 @@ import { ActivatedRoute } from '@angular/router';
 export class ObjectiveListComponent implements OnInit {
 
   isEmpty?: boolean;
-  constructor(private activatedRoute: ActivatedRoute) { }
+  constructor(private activatedRoute: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe( params =>{
@@ -17,4 +18,11 @@ export class ObjectiveListComponent implements OnInit {
     });
   }
 
+  create(){
+    this.router.navigate(['newObjective']);
+  }
+
+  habits(){
+    this.router.navigate(['habitList/true']);
+  }
 }

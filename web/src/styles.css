@@ -311,9 +311,10 @@ form{
 }
 
 .habit .row{
-  margin: 30px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 0px;
   width: 100%;
-  justify-content: center;
 }
 
 .habit h1{
@@ -338,8 +339,14 @@ form{
   margin-left: 70px;
 }
 
+.create-habit{
+  justify-content: center;
+}
+
 .grid-container{
   border-style: solid;
+  padding-left: 0px;
+  padding-right: 0px;
 }
 .grid-container .main-row{
   font-weight: bold;
@@ -348,4 +355,33 @@ form{
 .grid-container .cell{
   justify-content: center;
   display: flex;
+  border-left: 1px solid #CDCDCD;
+}
+
+hr{
+  opacity: 1;
+  color: #CDCDCD;
+}
+
+.cell .button{
+  margin: 0px 45px;
+}
+
+.invalid-feedback {
+  display: flex !important;
+  justify-content: end;
+  color: var(--dl-color-88);
+  background-image: url(./assets/cirlculo_rojo_x.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  padding-right: 20px;
+}
+
+.is-invalid{
+  border-color: var(--dl-color-error) !important;
+}
+
+input:focus-visible{
+  outline: none;
 }

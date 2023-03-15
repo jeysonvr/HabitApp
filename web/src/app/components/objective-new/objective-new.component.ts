@@ -10,16 +10,24 @@ import { Router } from '@angular/router';
 export class ObjectiveNewComponent implements OnInit {
 
   public formNewObjective!: FormGroup;
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private router: Router) { }
 
   ngOnInit(): void {
     this.formNewObjective = this.formBuilder.group({
-      txtName:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      txtUser:['',[Validators.required,Validators.pattern("^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$")]],
-      txtPassword:['',[Validators.required,Validators.minLength(8)]],
-      txtPasswordConfirmation:['',[Validators.required,Validators.minLength(8)]],
-      ddlHabits:['',[Validators.required,Validators.minLength(8)]],
+      txtTitle:['',[Validators.required,Validators.minLength(1)]],
+      txtDescription:['',[Validators.required,Validators.minLength(1)]]
     });
+  }
+  get f() {
+    return this.formNewObjective.controls;
+  }
+
+  async create(){
+    if(this.formNewObjective.valid)
+      this.router.navigate(['/objectiveList/false' ]);
+  }
+  async cancel(){
+    this.router.navigate(['/objectiveList/true']);
   }
 
 }
