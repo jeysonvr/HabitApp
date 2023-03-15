@@ -1,0 +1,417 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+  --dl-color-88: #888;
+  --dl-color-CC: #CCC;
+  --dl-color-main: #263238;
+  --dl-color-primary: #0E4DA4;
+  --dl-color-secondary: #1BB55C;
+  --dl-color-error: #E74C3C;
+  --dl-color-background: #FFF;
+}
+*{
+  padding: 0px;
+  margin: 0px;
+}
+html{
+  width: 100%;
+  height: 100%;
+}
+body{
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: Roboto;
+}
+app-root{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.login{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.signin{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  background-image: url(./assets/clock.png);
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  color: var(--dl-color-main);
+}
+
+.login .header{
+  flex: 1;
+}
+.container{
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  color: var(--dl-color-main);
+}
+
+h1{
+  font-size: 64px;
+  font-weight: 600;
+}
+
+h2{
+  font-size: 48px;
+  font-weight: 600;
+}
+
+h3{
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h4{
+  font-size: 34px;
+  font-weight: 600;
+}
+
+.menu{
+  top: 0px;
+  right: 0px;
+  height: 100%;
+  position: absolute !important;
+  background-color: var(--dl-color-primary);
+  color: var(--dl-color-background);
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 1;
+}
+
+.menu a{
+  color: var(--dl-color-background);
+  font-style: normal;
+}
+
+.login h1{
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  align-items: end;
+}
+
+.login h2{
+  justify-content: center;
+  display: flex;
+  flex: 1;
+  align-items: end;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 80%;
+  align-items: center;
+}
+
+.input-container{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: column;
+  margin: 20px 0px;
+}
+
+.buttonContainer button{
+  margin: 20px 0px;
+}
+
+.textbox{
+  border-radius: 10px;
+  border-color: var(--dl-color-88);
+  box-shadow: 0 4px 4px #00000040;
+  border-width: 1px;
+  border-style: solid;
+  height: 30px;
+}
+
+.textbox::placeholder{
+  color: var(--dl-color-CC);
+  padding-left: 10px;
+}
+
+.button{
+  box-shadow: 0 4px 4px #00000040;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  height: 30px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.white-botton{
+  border-style: none;
+  background-color: var(--dl-color-background);
+}
+.blue-botton{
+  border-style: none;
+  background-color: var(--dl-color-primary);
+  color: var(--dl-color-background);
+}
+
+.red-botton{
+  border-style: none;
+  background-color: var(--dl-color-error);
+  color: var(--dl-color-background);
+}
+
+.signin .header{
+  flex: 3;
+}
+
+.signin .container{
+  flex: 4;
+}
+
+.signin h1{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+  margin-top: 50px;
+}
+
+.signin h2{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+}
+
+.signin h3{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+}
+
+.signin form{
+  width: 100%;
+}
+
+.signin .row{
+  width: 100%;
+  justify-content: center;
+}
+
+.objective{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.objective .header{
+  position: relative;
+  z-index: 1;
+  flex: 2;
+  background-image: none;
+}
+
+.objective .header::before{
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url(./assets/target.png);
+  background-position: center;
+  opacity: .5;
+  background-repeat: no-repeat;
+}
+
+.objective .container{
+  flex: 5;
+  flex-direction: column;
+  height: 100%;
+}
+
+.objective .row{
+  width: 100%;
+  margin: 30px;
+}
+
+.objective h1{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+  margin-top: 50px;
+}
+
+.objective h2{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+}
+
+.card{
+  box-shadow: 4px 4px 4px #00000040;
+  background-image: url(assets/bike.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 250px;
+  width: 400px;
+  align-items: center;
+  justify-content: end;
+  font-weight: bold;
+}
+
+.card-empty{
+  box-shadow: 4px 4px 4px #00000040;
+}
+
+.objective form{
+  width: 100%;
+}
+
+.objective .obj-row{
+  width: 100%;
+  justify-content: center;
+  margin: 0px;
+}
+
+.draganddrop{
+  border-style: dashed;
+  height: 200px;
+  background-image: url(assets/dragdrop.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  border-color: var(--dl-color-88);
+}
+
+.draganddrop::placeholder{
+  padding-left: 70px;
+  color: var(--dl-color-main);
+}
+
+.habit{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.habit .header{
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  background-image: none;
+  background-color: #1BB55C40;
+}
+
+.habit .container{
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.habit form{
+  justify-content: center;
+}
+
+.habit .row{
+  margin-top: 30px;
+  margin-bottom: 30px;
+  margin-left: 0px;
+  width: 100%;
+}
+
+.habit h1{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+.habit h2{
+  flex: 1;
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+}
+
+.habit h3{
+  /* flex: 1; */
+  align-items: center;
+  display: flex;
+  margin-left: 70px;
+}
+
+.create-habit{
+  justify-content: center;
+}
+
+.grid-container{
+  border-style: solid;
+  padding-left: 0px;
+  padding-right: 0px;
+}
+.grid-container .main-row{
+  font-weight: bold;
+}
+
+.grid-container .cell{
+  justify-content: center;
+  display: flex;
+  border-left: 1px solid #CDCDCD;
+}
+
+.navbar{
+  /* display: flex; */
+  align-items: flex-start;
+}
+
+hr{
+  opacity: 1;
+  color: #CDCDCD;
+}
+
+.cell .button{
+  margin: 0px 45px;
+}
+
+.invalid-feedback {
+  display: flex !important;
+  justify-content: end;
+  color: var(--dl-color-88);
+  background-image: url(./assets/cirlculo_rojo_x.png);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 15px;
+  padding-right: 20px;
+}
+
+.is-invalid{
+  border-color: var(--dl-color-error) !important;
+}
+
+input:focus-visible{
+  outline: none;
+}

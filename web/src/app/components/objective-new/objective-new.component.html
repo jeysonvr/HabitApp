@@ -1,0 +1,83 @@
+<div class="objective">
+  <nav class="header navbar navbar-light bg-light">
+    <div class="row" style="margin: 0px;">
+      <div class="col-md-11">
+        <h1>
+          HabitApp
+        </h1>
+        <h2>
+          Crear objetivo
+        </h2>
+      </div>
+      <div class="col-md-1" style="justify-content: center;
+      display: flex;
+      flex-direction: column;
+      width: 80px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+
+  </nav>
+  <div class="collapse" id="menu">
+    <div class="menu">
+      <h3 style="padding: 50px">
+        Menú
+      </h3>
+      <hr style="width: 100%;">
+      <h4><a href="" routerLink="/objectiveList/false">Objetivos</a></h4>
+      <h4><a href="" routerLink="/habitList/false">Tareas</a></h4>
+      <h4><a href="" routerLink="">Cerrar sesión</a></h4>
+    </div>
+  </div>
+  <div class="container">
+    <form [formGroup]="formNewObjective">
+      <div class="row obj-row">
+        <div class="input-container col-md-6">
+          Imagén de referencia
+          <input class="draganddrop"
+          type="text"
+          placeholder="Escoge una imagén o arrastrala aquí" required="true" value="" readonly="true">
+        </div>
+      </div>
+      <div class="row obj-row">
+        <div class="input-container col-md-6">
+          Título
+          <input  class="textbox"
+          type="text"
+          placeholder=""
+          formControlName="txtTitle"
+          [ngClass]="f['txtTitle'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtTitle'].valid">
+            Campo requerido
+          </div>
+        </div>
+      </div>
+      <div class="row obj-row">
+        <div class="input-container col-md-6">
+          Descripción
+          <input  class="textbox"
+          type="text"
+          placeholder=""
+          formControlName="txtDescription"
+          [ngClass]="f['txtDescription'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtDescription'].valid">
+            Campo requerido
+          </div>
+        </div>
+      </div>
+      <div class="row obj-row"></div>
+      <div class="row obj-row">
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="create()" class="button blue-botton"> Aceptar </button>
+        </div>
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="cancel()" class="button red-botton"> Cancelar </button>
+        </div>
+      </div>
+
+    </form>
+  </div>
+</div>

@@ -1,0 +1,78 @@
+<div class="objective">
+
+  <nav class="header navbar navbar-light bg-light">
+    <div class="row" style="margin: 0px;">
+      <div class="col-md-11">
+        <h1>
+          HabitApp
+        </h1>
+        <h2>
+          Objetivos
+        </h2>
+      </div>
+      <div class="col-md-1" style="justify-content: center;
+      display: flex;
+      flex-direction: column;
+      width: 80px;">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" aria-controls="menu" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+    </div>
+
+
+  </nav>
+  <div class="collapse" id="menu">
+    <div class="menu">
+      <h3 style="padding: 50px">
+        Menú
+      </h3>
+      <hr style="width: 100%;">
+      <h4><a href="" routerLink="/objectiveList/false">Objetivos</a></h4>
+      <h4><a href="" routerLink="/habitList/false">Tareas</a></h4>
+      <h4><a href="" routerLink="">Cerrar sesión</a></h4>
+    </div>
+  </div>
+
+  <div *ngIf="isEmpty" class="container">
+    <div class="row"></div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-8 card-empty">
+        <strong>
+          ¿Sabías qué?
+        </strong>
+        <p>
+          Tomar de 6 a 8 vasos de agua al día trae diversos beneficios al organismo...
+        </p>
+      </div>
+    </div>
+    <div class="row"></div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-4" style="justify-content: center;">
+        <p style="justify-content: center; display: flex;color: #888;">
+          Aún no tienes objetivos
+        </p>
+      </div>
+    </div>
+    <div class="row"></div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-3 buttonContainer">
+        <button type="button" (click)="create()" class="button blue-botton"> Agregar nuevos objetivos </button>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="!isEmpty" class="container">
+    <div class="row" style="justify-content: center;">
+      <div class="card col-md-4" (click)="habits()">
+        <div class="card-text">
+          Hacer ejercicio
+        </div>
+      </div>
+    </div>
+    <div class="row" style="justify-content: center;">
+      <div class="col-md-3 buttonContainer">
+        <button type="button" (click)="create()" class="button blue-botton"> Agregar nuevos objetivos </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<div class="login">
+  <div class="header">
+    <h1>
+      HabitApp
+    </h1>
+    <h2>
+        Ingreso
+    </h2>
+  </div>
+  <div class="container">
+    <form [formGroup]="formLogin">
+      <div class = "input-container col-md-4">
+          Usuario
+          <input  class="textbox"
+          type="text"
+          placeholder="Usuario"
+          formControlName="txtUser"
+          [ngClass]="f['txtUser'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtUser'].valid">
+            Campo requerido
+          </div>
+      </div>
+      <div class = "input-container col-md-4">
+          Contraseña
+          <input  class="textbox"
+          type="password"
+          placeholder="***********************"
+          formControlName="txtPassword"
+          [ngClass]="f['txtPassword'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtPassword'].valid">
+            Campo requerido
+          </div>
+      </div>
+      <div class="buttonContainer col-md-3">
+          <button type="button" (click)="login()" class="button blue-botton"> Ingresar </button>
+          <button type="button" (click)="signin()" class="button white-botton"> Registrarse </button>
+      </div>
+
+  </form>
+  </div>
+</div>

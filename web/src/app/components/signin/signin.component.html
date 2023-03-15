@@ -1,0 +1,89 @@
+<div class="signin">
+  <div class="header">
+    <h1>
+      HabitApp
+    </h1>
+    <h3>
+      Una herramienta que te ayudará a mejorar tus hábitos
+    </h3>
+    <h2>
+      Registro
+    </h2>
+  </div>
+  <div class="container">
+    <form [formGroup]="formSignin">
+      <div class="row">
+        <div class="input-container col-md-4">
+          Nombre completo
+          <input  class="textbox"
+          type="text"
+          placeholder="Nombre"
+          formControlName="txtName"
+          [ngClass]="f['txtName'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtName'].valid">
+            Campo requerido
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="input-container col-md-4">
+          Correo/Usuario
+          <input  class="textbox"
+          type="text"
+          placeholder="ejemplo@correo.com"
+          formControlName="txtUser"
+          [ngClass]="f['txtUser'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtUser'].valid">
+            Campo requerido
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-container col-md-4">
+          Contraseña
+          <input  class="textbox"
+          type="password"
+          placeholder="***********************"
+          formControlName="txtPassword"
+          [ngClass]="f['txtPassword'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtPassword'].valid">
+            Campo requerido
+          </div>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="input-container col-md-4">
+          Confirmar contraseña
+          <input  class="textbox"
+          type="password"
+          placeholder="***********************"
+          formControlName="txtPasswordConfirmation"
+          [ngClass]="f['txtPasswordConfirmation'].valid?'is-valid':'is-invalid'">
+          <div i18n class="invalid-feedback" *ngIf="!f['txtPasswordConfirmation'].valid">
+            Campo requerido
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-container col-md-4">
+          ¿Qué hábitos te gustaría mejorar?
+          <select class="textbox" formControlName="ddlHabits" placeholder="Seleccionar opcion(es)"
+          [ngClass]="f['ddlHabits'].valid?'is-valid':'is-invalid'">
+            <option value="1">Hacer ejercicio</option>
+            <option value="2">Dormir mejor</option>
+            <option value="3">Aumentar productividad</option>
+          </select>
+          <div i18n class="invalid-feedback" *ngIf="!f['ddlHabits'].valid">
+            Campo requerido
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="signin()" class="button blue-botton"> Aceptar </button>
+        </div>
+        <div class="col-md-3 buttonContainer">
+          <button type="button" (click)="cancel()" class="button red-botton"> Cancelar </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
